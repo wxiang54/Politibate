@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #POLITIBATE
 
-print "content-type: text/html\n"
+print "content-type: text/html\r\n"
 
 import cgi
 import cgitb
