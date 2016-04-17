@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Signup/Login</title>
+  
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="../static/favycon.png" type="image/x-icon">
+  <link rel="icon" href="../static/favycon.png" type="image/x-icon">
+  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/politibate" class="brand-logo"><img src = 
+      "../static/PolitiBate_Logo.png" ></a>
+<!--
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  -->
+	<!-- Error Msg -->
+	<br><br><br><center><font color={{ color }}> {{ msg }} </font></center>
+	
+	<br>
+    <form method="POST" action ="/politibate/login" class="container"><h4><center> Log In! </center></h4>
+      <input type="hidden" name="mode" value="login">
+        <table>
+            <tr> <td class="header center red-text">Username</td><td ><input type="text" name="username" size="20" value="" placeholder="Username"></td> </tr>
+            <tr> <td class="header center red-text">Password</td><td><input type="password" name="password" size="20" value="" placeholder="Password"></td> </tr>
+            <tr> <td class="header center red-text"><input type="submit" name="Submit" value="Login" class="btn-large waves-effect waves-light red"></td> </tr>
+            </table></form>
+        <form method="POST" action="/politibate/login" class="container"><h4><center>Make an Account!</center></h4>
+          <input type="hidden" name="mode" value="signup">
+        <table>
+        <tr> <td class="header center red-text">Username</td><td><input type="text" name="username" size="20" value="" placeholder="Username"></td> </tr>
+        <tr> <td class="header center red-text">Password</td><td><input type="password" name="password" size="20" value="" placeholder="Password"></td> </tr>
+        <tr> <td class="header center red-text">Retype Password</td><td><input type="password" name="rpassword" size="20" value="" placeholder="Retype Password"></td> </tr>
+        <tr><td class="header center red-text"><input type="submit" name="Submit" value="Create!" class="btn-large waves-effect waves-light red"></td> </tr>
+        </table></form><br></body>
+
+<footer class="page-footer red">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">This website was made for defHacks() by Fidel Briones, William Xiang,
+           Vicente Gomez, and Kerr Yoo. Hope you enjoy!</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Contact Us!</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Fidel: fbriones@stuy.edu</a></li>
+            <li><a class="white-text" href="#!">William: wxiang@stuy.edu</a></li>
+            <li><a class="white-text" href="#!">Vicente: vicente.gomez0024@gmail.com</a></li>
+            <li><a class="white-text" href="#!">Kerr: kerr99@gmail</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="http://www.facebook.com">Facebook</a></li>
+            <li><a class="white-text" href="http://www.twitter.com">Twitter</a></li>
+            <li><a class="white-text" href="http://www.instagram.com">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+  </html>

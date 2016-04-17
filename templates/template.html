@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>PolitiBate</title>
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="../static/favycon.png" type="image/x-icon">
+  <link rel="icon" href="../static/favycon.png" type="image/x-icon">
+  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/politibate" class="brand-logo.center"><img src = "../static/PolitiBate_Logo.png" ></a>
+      <!--<ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> -->
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+	  <br>
+	  
+	  <!-- Error Msg -->
+	  <center><font color={{ color }}> {{ msg }} </font></center>
+	  <br>
+	  
+	  <!-- WELCOME MSG -->
+	  <h1 class="header center red-text">
+	  {% if welcome is defined %}
+		{{ welcome }}
+	  {% else %}
+		Welcome to PolitiBate!
+	  {% endif %}
+	  </h1>
+	  
+      <div class="row center">
+        <h5 class="header col s12 light">Explore our many topics and get
+         to debating!</h5>
+      </div>
+      <div class="row center">
+		{% if loggedIn %}
+			<a href="http://sol-route.com/politibate/topics" id="download-button" class="btn-large waves-effect waves-light red">View Topics</a>
+			<br><br>
+			<a href="http://sol-route.com/politibate/logout" id="download-button" class="btn-large waves-effect waves-light red">Log Out</a>
+		{% else %}
+			<a href="http://sol-route.com/politibate/login" id="download-button" class="btn-large waves-effect waves-light red">Log In</a>
+		{% endif %}
+	  </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">face</i></h2>
+            <h5 class="center">Pick your stance</h5>
+
+            <p class="light">Choose your stance on one of our controversial topics and be paired up with someone with
+			the opposite view. Bring your best arguments!</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Voting System</h5>
+
+            <p class="light">Spectators will be able to view your arguments and can vote for who formulates a better arguement. </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">swap_vertical_circle</i></h2>
+            <h5 class="center">Get Ranked!</h5>
+
+            <p class="light">You will be ranked higher on our list of best debators, depending on how many people vote for your argument and how many debates you win. 
+							Show the world how educated you are!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="page-footer red">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">This website was made for defHacks() 2016 by Fidel Briones, William Xiang,
+           Vicente Gomez, and Kerr Yoo. Hope you enjoy!</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Contact Us!</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Fidel: fbriones@stuy.edu</a></li>
+            <li><a class="white-text" href="#!">William: wxiang@stuy.edu</a></li>
+            <li><a class="white-text" href="#!">Vicente: vicente.gomez0024@gmail.com</a></li>
+            <li><a class="white-text" href="#!">Kerr: kerr99@gmail</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="facebook.com">Facebook</a></li>
+            <li><a class="white-text" href="twitter.com">Twitter</a></li>
+            <li><a class="white-text" href="instagram.com">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../static/js/materialize.js"></script>
+  <script src="../static/js/init.js"></script>
+
+  </body>
+</html>

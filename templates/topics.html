@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Topics!</title>
+<link rel="shortcut icon" href="../static/favycon.png" type="image/x-icon">
+  <link rel="icon" href="../static/favycon.png" type="image/x-icon">
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="http://sol-route.com/politibate/" class="brand-logo"><img src = 
+      "../static/PolitiBate_Logo.png" ></a>
+     <!-- <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
+    </div>
+  </nav>
+  <br>
+  <center><font color="green">{{ msg }}</font><center>
+  <br>
+  <h1 class="header center red-text">
+    
+    Choose Your Topic!
+	
+    </h1>
+        <table>
+        <tr> <td><center><p href="#!" class="card-panel" style="color:white"><b>2016 Presedential Election</b></p></center></td><td>The 2016 Presidential Race is up and running. Debate who you feel should represent either the Republicans or Democrats and in the end, who should become President</td> </tr></table>
+        <table><center>
+        <tr><td width="100"><form method="post" action="/politibate/topics" id="trump"><input type="hidden" name="topic" value="president"><input type="hidden" name="position" value="trump"><button type="submit" form="trump" id="download-button" class="btn-large waves-effect waves-light red">Donald Trump</button></form></td>
+        <td width="100"><form method="post" action="/politibate/topics" id="kasich"><input type="hidden" name="topic" value="president"><input type="hidden" name="position" value="kasich"><button type="submit" form="kasich" id="download-button" class="btn-large waves-effect waves-light red">John Kasich</button></form></td>
+        <td width="100"><form method="post" action="/politibate/topics" id="cruz"><input type="hidden" name="topic" value="president"><input type="hidden" name="position" value="cruz"><button type="submit" form="cruz" id="download-button" class="btn-large waves-effect waves-light red">Ted Cruz</button></form></td>
+        <td width="100"><form method="post" action="/politibate/topics" id="sanders"><input type="hidden" name="topic" value="president"><input type="hidden" name="position" value="sanders"><button type="submit" form="sanders" id="download-button" class="btn-large waves-effect waves-light blue">Bernie Sanders</button></form></td>
+        <td width="100"><form method="post" action="/politibate/topics" id="clinton"><input type="hidden" name="topic" value="president"><input type="hidden" name="position" value="clinton"><button type="submit" form="clinton" id="download-button" class="btn-large waves-effect waves-light blue">Hillary Clinton</button></form></td></tr></center></table>
+        <table><tr></tr><tr></tr><tr></tr>
+        <tr> <td><center><p href="#!" class="card-panel" style="color:white"><b>Should Marijuana Be a Medical Option?</b></p></center></td><td>Medical Marijuana has been crutial in the medical field. However, some people abuse its main use. Debate whether or not marijuana should continue to be used for medical purposes</td> </tr><tr><td></td><td><form method="post" action="/politibate/topics" id="pro1"><input type="hidden" name="topic" value="marijuana"><input type="hidden" name="position" value="pro"><button type="submit" form="pro1" id="download-button" class="btn-large waves-effect waves-light blue">PRO</button></form><form method="post" action="/politibate/topics" id="con1"><input type="hidden" name="topic" value="marijuana"><input type="hidden" name="position" value="con"><button type="submit" form="con1" id="download-button" class="btn-large waves-effect waves-light red">CON</button></form></td></tr><tr></tr>
+     
+        <tr> <td><center><p href="#!" class="card-panel" style="color:white"><b>Should More Gun Control Laws Be Enacted?</b></p></center></td><td>Guns have been used on both sides of the law. Police officers have used guns to protect the people, however, individuals use illegeally owned guns to commit crimes. Debate whether or not gun laws in</td> </tr><tr><td></td><td><form method="post" action="/politibate/topics" id="pro2"><input type="hidden" name="topic" value="gunControl"><input type="hidden" name="position" value="pro"><button type="submit" form="pro2" id="download-button" class="btn-large waves-effect waves-light blue">PRO</button></form><form method="post" action="/politibate/topics" id="con2"><input type="hidden" name="topic" value="gunControl"><input type="hidden" name="position" value="con"><button type="submit" form="con2" id="download-button" class="btn-large waves-effect waves-light red">CON</button></form></td></tr><tr></tr>
+
+        <tr> <td><center><p href="#!" class="card-panel" style="color:white"><b>Should Animals Be Used for Scientific or Commercial Testing?</b></p></center></td><td>Animals have been used for many things that better the lives of humans like clothing, and food. Debate on whether or not we should continue doing this to animals.</td> </tr><tr><td></td><td><form method="post" action="/politibate/topics" id="pro3"><input type="hidden" name="topic" value="animalTest"><input type="hidden" name="position" value="pro"><button type="submit" form="pro3" id="download-button" class="btn-large waves-effect waves-light blue">PRO</button></form><form method="post" action="/politibate/topics" id="con3"><input type="hidden" name="topic" value="animalTest"><input type="hidden" name="position" value="con"><button type="submit" form="con3" id="download-button" class="btn-large waves-effect waves-light red">CON</button></form></td></tr><tr></tr>
+
+        <tr> <td><center><p href="#!" class="card-panel" style="color:white"><b>Should the Death Penalty Be Allowed?</b></p></center></td><td>Different forms of the Death Penaltly have been around for thousands of years, from hanging, to lethal injection. Debate on whether or not the death penalty should be used in our justice system.</td> </tr><tr><td></td><td><form method="post" action="/politibate/topics" id="pro4"><input type="hidden" name="topic" value="deathPenalty"><input type="hidden" name="position" value="pro"><button type="submit" form="pro4" id="download-button" class="btn-large waves-effect waves-light blue">PRO</button></form><form method="post" action="/politibate/topics" id="con4"><input type="hidden" name="topic" value="deathPenalty"><input type="hidden" name="position" value="con"><button type="submit" form="con4" id="download-button" class="btn-large waves-effect waves-light red">CON</button></form></td></tr><tr></tr>
+
+        <tr> <td><center><p href="#!" class="card-panel" style="color:white"><b>Should Students Have to Wear School Uniforms?</b></p></center></td><td>As time has passed, different educational institutions have required students to wear uniforms to look formal during the school day. However, students want to be comfortable during their time in school. Debate whether or not students should wear uniforms. </td> </tr><tr><td></td><td><form method="post" action="/politibate/topics" id="pro5"><input type="hidden" name="topic" value="schoolUniforms"><input type="hidden" name="position" value="pro"><button type="submit" form="pro5" id="download-button" class="btn-large waves-effect waves-light blue">PRO</button></form><form method="post" action="/politibate/topics" id="con5"><input type="hidden" name="topic" value="schoolUniforms"><input type="hidden" name="position" value="con"><button type="submit" form="con5" id="download-button" class="btn-large waves-effect waves-light red">CON</button></form></td></tr><tr></tr>
+
+        <tr> <td><center><p href="#!" class="card-panel" style="color:white"><b>Should the Federal Minimum Wage Be Increased?</b></p></center></td><td>As our society becomes more expensive to live in, people are demanding a higher minimum wage that supports basic necessities. However, some believe that raising the minimum wage will do more harm than good. Debate as to whethere or not the minimum wage should be raised.</td> </tr><tr><td></td><td><form method="post" action="/politibate/topics" id="pro6"><input type="hidden" name="topic" value="minWage"><input type="hidden" name="position" value="pro"><button type="submit" form="pro6" id="download-button" class="btn-large waves-effect waves-light blue">PRO</button></form><form method="post" action="/politibate/topics" id="con6"><input type="hidden" name="topic" value="minWage"><input type="hidden" name="position" value="con"><button type="submit" form="con6" id="download-button" class="btn-large waves-effect waves-light red">CON</button></form></td></tr><tr></tr>
+
+        <tr> <td><center><p href="#!" class="card-panel" style="color:white"><b>Should Abortion Be Legal?</b></p></center></td><td>Abortion has been a controversial topic for a long time. Debate on whther or not abortion should be legal or not. </td> </tr><tr><td></td><td><form method="post" action="/politibate/topics" id="pro7"><input type="hidden" name="topic" value="abortions"><input type="hidden" name="position" value="pro"><button type="submit" form="pro7" id="download-button" class="btn-large waves-effect waves-light blue">PRO</button></form><form method="post" action="/politibate/topics" id="con7"><input type="hidden" name="topic" value="abortions"><input type="hidden" name="position" value="con"><button type="submit" form="con7" id="download-button" class="btn-large waves-effect waves-light red">CON</button></form></td></tr><tr></tr>
+
+          <tr> <td><center><p href="#!" class="card-panel" style="color:white"><b>What Are the Solutions to Illegal Immigration in America?</b></p></center></td><td>Immigration has been a popular topic for quite some time. Debate on what specifically we should do with the immigrants that come into our country.</td> </tr><tr><td></td><td><form method="post" action="/politibate/topics" id="pro8"><input type="hidden" name="topic" value="illegalImmigrants"><input type="hidden" name="position" value="pro"><button type="submit" form="pro8" id="download-button" class="btn-large waves-effect waves-light blue">PRO</button></form><form method="post" action="/politibate/topics" id="con8"><input type="hidden" name="topic" value="illegalImmigrants"><input type="hidden" name="position" value="con"><button type="submit" form="con8" id="download-button" class="btn-large waves-effect waves-light red">CON</button></form></td></tr><tr></tr>
+        
+        </table><br>
+    
+<footer class="page-footer red">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">This website was made for defHacks() by Fidel Briones, William Xiang,
+           Vicente Gomez, and Kerr Yoo. Hope you enjoy!</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Contact Us!</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Fidel: fbriones@stuy.edu</a></li>
+            <li><a class="white-text" href="#!">William: wxiang@stuy.edu</a></li>
+            <li><a class="white-text" href="#!">Vicente: vicente.gomez0024@gmail.com</a></li>
+            <li><a class="white-text" href="#!">Kerr: kerr99@gmail</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="http://www.facebook.com">Facebook</a></li>
+            <li><a class="white-text" href="http://www.twitter.com">Twitter</a></li>
+            <li><a class="white-text" href="http://www.instagram.com">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+  </html>
