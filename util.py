@@ -7,7 +7,7 @@ def verify(username, password):
     #0: Success
     #1: Username exists, but password wrong
     #2: Username doesn't exist
-    f=open('/var/www/FlaskApp/FlaskApp/users.csv','r')
+    f=open('/var/www/FlaskApp/politibate/users.csv','r')
     userList= f.read().split("\n")
     f.close()
     for user in userList:
@@ -35,7 +35,7 @@ def addUser(username, password, rpassword):
     if password != rpassword:
         return 3
     
-    f=open('/var/www/FlaskApp/FlaskApp/users.csv','r+')
+    f=open('/var/www/FlaskApp/politibate/users.csv','r+')
     userList= f.read().split("\n")
 
     for user in userList:
@@ -51,7 +51,7 @@ def addUser(username, password, rpassword):
 def fillTopics(f, username, password):
     retStr = "%s,%s," % (username, hsh.md5(password).hexdigest())
     
-    topics = open('/var/www/FlaskApp/FlaskApp/topicRef.txt','r').read().split("\n")
+    topics = open('/var/www/FlaskApp/politibate/topicRef.txt','r').read().split("\n")
     for topic in topics:
         retStr += "%s=%s," % (topic,"none")
 
@@ -62,7 +62,7 @@ def fillTopics(f, username, password):
 
 
 def updateRoom(room, username, comment):
-    roomHTML = open("/var/www/FlaskApp/FlaskApp/templates/debateRooms/%s.html" % room, "r")
+    roomHTML = open("/var/www/FlaskApp/politibate/templates/debateRooms/%s.html" % room, "r")
     roomRead = roomHTML.read().split("<!-- TAGLINE -->")
     
     commentToAdd = '''
@@ -72,13 +72,13 @@ def updateRoom(room, username, comment):
     
     roomHTML.close()
 
-    roomHTML = open("/var/www/FlaskApp/FlaskApp/templates/debateRooms/%s.html" % room, "w")
+    roomHTML = open("/var/www/FlaskApp/politibate/templates/debateRooms/%s.html" % room, "w")
     roomHTML.write(roomRead[0] + commentToAdd + roomRead[1])
     roomHTML.close()
 
 
 def chPos(username, password, topic, position):
-    f=open('/var/www/FlaskApp/FlaskApp/users.csv','r')
+    f=open('/var/www/FlaskApp/politibate/users.csv','r')
     userList= f.read().split("\n")
     
     for user in userList:
@@ -101,7 +101,7 @@ def chPos(username, password, topic, position):
         else:
             retStr += globVar + "\n"
     f.close()
-    f = open('/var/www/FlaskApp/FlaskApp/users.csv', 'w')
+    f = open('/var/www/FlaskApp/politibate/users.csv', 'w')
     f.write(retStr)
     f.close()
 

@@ -1,12 +1,10 @@
 from flask import Flask, request, render_template, redirect, url_for, make_response
 from util import *
 import hashlib as hsh
-import time
 
 app = Flask(__name__)
 
-
-@app.route('/politibate/')
+@app.route('/')
 def homepage():
     try:
         title = "PolitiBate"
@@ -18,7 +16,6 @@ def homepage():
                 msg = "LoginError: Cookies may have been tampered with. Try logging in again."
             else:
                 welcome = "Welcome back to PolitiBate, %s!" % username
-                time.sleep(1)
                 return render_template("template.html", title=title, welcome=welcome, loggedIn = True)
             
         return render_template("template.html", title=title, loggedIn=False)
@@ -26,7 +23,7 @@ def homepage():
     except Exception,e:
         return str(e)
 
-@app.route('/politibate/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     try:
         if request.method == 'GET':
@@ -86,7 +83,7 @@ def login():
         return str(e)
 
 
-@app.route('/politibate/logout')
+@app.route('/logout')
 def logout():
     try:
         resp = make_response(redirect(url_for('homepage')))
@@ -99,7 +96,7 @@ def logout():
         return str(e)
 
 
-@app.route('/politibate/topics',methods=['GET', 'POST'])
+@app.route('/topics',methods=['GET', 'POST'])
 def topics():
     try:
         if request.method == 'GET':
@@ -130,7 +127,7 @@ def topics():
     except Exception,e:
         return str(e)
 
-@app.route('/politibate/debate', methods=['GET','POST'])
+@app.route('/debate', methods=['GET','POST'])
 def debate():
     try:
         if request.method == 'GET':
